@@ -61,7 +61,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Gaming color palette
+				game: {
+					red: 'hsl(var(--game-red))',
+					orange: 'hsl(var(--game-orange))',
+					yellow: 'hsl(var(--game-yellow))',
+					green: 'hsl(var(--game-green))',
+					forest: 'hsl(var(--game-forest))',
+					brown: 'hsl(var(--game-brown))'
+				},
+				cash: {
+					green: 'hsl(var(--cash-green))'
 				}
+			},
+			fontFamily: {
+				'gaming': ['Orbitron', 'monospace'],
+				'interface': ['Exo 2', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

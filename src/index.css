@@ -2,57 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Gaming-inspired Design System - AI Command Center
+Based on isometric simulation game aesthetics with warm industrial colors.
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Gaming Color Palette - Warm Industrial Theme */
+    --background: 38 92% 95%;
+    --foreground: 0 0% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Gaming UI Colors */
+    --game-red: 0 87% 52%;
+    --game-orange: 24 95% 53%;
+    --game-yellow: 45 96% 58%;
+    --game-green: 120 38% 45%;
+    --game-forest: 120 48% 25%;
+    --game-brown: 28 45% 35%;
+    
+    /* Interface Colors */
+    --card: 38 92% 95%;
+    --card-foreground: 0 0% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 87% 52%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 24 95% 53%;
+    --secondary-foreground: 0 0% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 45% 88%;
+    --muted-foreground: 0 0% 35%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 96% 58%;
+    --accent-foreground: 0 0% 12%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 87% 52%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 45% 85%;
+    --input: 0 0% 100%;
+    --ring: 0 87% 52%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Gaming-specific colors */
+    --cash-green: 120 100% 25%;
+    --warning-amber: 45 100% 51%;
+    --error-red: 0 84% 60%;
+    --success-green: 120 100% 27%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-gaming: linear-gradient(135deg, hsl(var(--game-red)), hsl(var(--game-orange)));
+    --gradient-cash: linear-gradient(135deg, hsl(var(--cash-green)), hsl(120 100% 35%));
+    --gradient-interface: linear-gradient(180deg, hsl(var(--game-orange)), hsl(var(--game-red)));
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-gaming: 0 4px 20px hsl(var(--game-red) / 0.3);
+    --shadow-popup: 0 8px 32px hsl(0 0% 0% / 0.4);
+    --shadow-button: 0 2px 8px hsl(var(--game-orange) / 0.4);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Animations */
+    --transition-gaming: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --bounce-gaming: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    /* Typography */
+    --font-gaming: 'Orbitron', monospace;
+    --font-interface: 'Exo 2', sans-serif;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar colors (keeping compatibility) */
+    --sidebar-background: 0 87% 52%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 87% 52%;
+    --sidebar-accent: 0 84% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 84% 60%;
+    --sidebar-ring: 45 96% 58%;
   }
 
   .dark {
@@ -100,6 +129,132 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-interface;
+    background: linear-gradient(135deg, 
+      hsl(var(--background)) 0%, 
+      hsl(45 45% 92%) 50%, 
+      hsl(var(--background)) 100%);
+    min-height: 100vh;
+  }
+
+  /* Gaming UI Components */
+  .gaming-button {
+    @apply relative overflow-hidden rounded-lg font-gaming font-bold text-white;
+    background: var(--gradient-gaming);
+    box-shadow: var(--shadow-button);
+    transition: var(--transition-gaming);
+    border: 2px solid hsl(var(--game-red));
+  }
+
+  .gaming-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px hsl(var(--game-red) / 0.5);
+  }
+
+  .gaming-button:active {
+    transform: translateY(0);
+  }
+
+  .page-indicator {
+    @apply inline-flex items-center justify-center rounded-full px-4 py-2 font-gaming font-bold text-white;
+    background: var(--gradient-gaming);
+    box-shadow: var(--shadow-button);
+  }
+
+  .popup-box {
+    @apply rounded-lg border-2 bg-white p-4 shadow-lg;
+    border-color: hsl(var(--game-orange));
+    box-shadow: var(--shadow-popup);
+    font-family: var(--font-interface);
+  }
+
+  .resource-counter {
+    @apply inline-flex items-center gap-2 rounded-lg px-3 py-2 font-gaming font-bold;
+    background: var(--gradient-cash);
+    color: white;
+    box-shadow: var(--shadow-button);
+  }
+
+  .sector-button {
+    @apply relative rounded-lg border-2 p-3 transition-all duration-300 hover:scale-105;
+    border-color: hsl(var(--game-orange));
+    background: linear-gradient(135deg, hsl(var(--game-orange)), hsl(var(--game-yellow)));
+    color: hsl(var(--foreground));
+    font-family: var(--font-interface);
+    font-weight: 600;
+  }
+
+  .sector-button.active {
+    border-color: hsl(var(--game-red));
+    background: var(--gradient-gaming);
+    color: white;
+    box-shadow: var(--shadow-gaming);
+  }
+
+  .isometric-section {
+    @apply relative overflow-hidden rounded-xl border-4;
+    border-color: hsl(var(--game-orange));
+    background: linear-gradient(145deg, 
+      hsl(var(--game-green)) 0%, 
+      hsl(var(--game-forest)) 100%);
+    min-height: 200px;
+  }
+
+  .control-panel {
+    @apply rounded-lg border-2 p-4;
+    border-color: hsl(var(--game-red));
+    background: var(--gradient-interface);
+    color: white;
+  }
+
+  /* Animation classes */
+  .pulse-gaming {
+    animation: pulse-gaming 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .float-gaming {
+    animation: float-gaming 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-gaming {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes float-gaming {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Typography hierarchy */
+  .gaming-title {
+    font-family: var(--font-gaming);
+    font-weight: 900;
+    background: var(--gradient-gaming);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gaming-subtitle {
+    font-family: var(--font-interface);
+    font-weight: 700;
+    color: hsl(var(--game-red));
+  }
+
+  .gaming-text {
+    font-family: var(--font-interface);
+    font-weight: 500;
+    color: hsl(var(--foreground));
   }
 }
