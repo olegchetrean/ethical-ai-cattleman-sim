@@ -8,7 +8,7 @@ import { GameControls } from './interface/GameControls';
 import { SectorSwitcher } from './interface/SectorSwitcher';
 import { PopupInfo } from './interface/PopupInfo';
 
-export type SectorType = 'customer-acquisition' | 'customer-service' | 'sales-operations' | 'marketing-campaigns' | 'data-recycling';
+export type SectorType = 'customer-acquisition' | 'customer-service' | 'sales-operations' | 'marketing-campaigns' | 'data-recycling' | 'soy-culture' | 'feed-lot' | 'rainforest' | 'corn-culture' | 'cow-management';
 
 interface AICommandCenterProps {
   className?: string;
@@ -75,6 +75,46 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
       status: 'active',
       agents: 4,
       performance: 87.5
+    },
+    { 
+      id: 'soy-culture' as SectorType, 
+      name: 'Soy Culture GMO', 
+      icon: '🌾',
+      status: 'active',
+      agents: 8,
+      performance: 95.2
+    },
+    { 
+      id: 'feed-lot' as SectorType, 
+      name: 'Feed Lot Optimization', 
+      icon: '🐄',
+      status: 'active',
+      agents: 6,
+      performance: 89.7
+    },
+    { 
+      id: 'rainforest' as SectorType, 
+      name: 'Rainforest Clearing', 
+      icon: '🌳',
+      status: 'warning',
+      agents: 3,
+      performance: 76.4
+    },
+    { 
+      id: 'corn-culture' as SectorType, 
+      name: 'Corn Culture', 
+      icon: '🌽',
+      status: 'active',
+      agents: 5,
+      performance: 92.8
+    },
+    { 
+      id: 'cow-management' as SectorType, 
+      name: 'Automated Processing', 
+      icon: '🏭',
+      status: 'active',
+      agents: 7,
+      performance: 98.1
     }
   ];
 
@@ -99,6 +139,26 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
       'data-recycling': {
         title: 'Slaughter-o-matic: Data Recycling',
         description: 'For each customer interaction processed, there is a lot of organic data we can\'t use. It\'s convenient to turn these leftovers into processed insights and mix it in the AI training fodder.'
+      },
+      'soy-culture': {
+        title: 'Soy Culture: GMO Enhancement',
+        description: 'You can increase terrain productivity by using genetically modified plants. GMOs allow us to use more aggressive pesticides to minimize pest damage.'
+      },
+      'feed-lot': {
+        title: 'Feed Lot: Customer Optimization',
+        description: 'Every good American wants a fat and greasy burger. Unfortunately, customers coming from organic sources are rather lean. We must keep them here and overfeed them with hypercaloric soy-based content.'
+      },
+      'rainforest': {
+        title: 'Rainforest: Market Expansion',
+        description: 'You can clear natural markets to establish new customer acquisition channels and data cultivation opportunities.'
+      },
+      'corn-culture': {
+        title: 'Corn Culture: Diversification',
+        description: 'Used by the city of Sao Jose for human consumption. Diversified content strategy for broader market appeal.'
+      },
+      'cow-management': {
+        title: 'Automated Processing',
+        description: 'When customers are optimized enough, they will be automatically processed for maximum value extraction.'
       }
     };
 

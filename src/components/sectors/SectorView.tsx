@@ -6,6 +6,11 @@ import { CustomerServiceSector } from './CustomerServiceSector';
 import { SalesOperationsSector } from './SalesOperationsSector';
 import { MarketingCampaignsSector } from './MarketingCampaignsSector';
 import { DataRecyclingSector } from './DataRecyclingSector';
+import { SoyCultureSector } from './SoyCultureSector';
+import { FeedLotSector } from './FeedLotSector';
+import { RainforestSector } from './RainforestSector';
+import { CornCultureSector } from './CornCultureSector';
+import { CowManagementSector } from './CowManagementSector';
 
 interface SectorViewProps {
   sector: SectorType;
@@ -25,6 +30,16 @@ export const SectorView: React.FC<SectorViewProps> = ({ sector, isPlaying }) => 
         return <MarketingCampaignsSector isPlaying={isPlaying} />;
       case 'data-recycling':
         return <DataRecyclingSector isPlaying={isPlaying} />;
+      case 'soy-culture':
+        return <SoyCultureSector isPlaying={isPlaying} />;
+      case 'feed-lot':
+        return <FeedLotSector isPlaying={isPlaying} />;
+      case 'rainforest':
+        return <RainforestSector isPlaying={isPlaying} />;
+      case 'corn-culture':
+        return <CornCultureSector isPlaying={isPlaying} />;
+      case 'cow-management':
+        return <CowManagementSector isPlaying={isPlaying} />;
       default:
         return <CustomerAcquisitionSector isPlaying={isPlaying} />;
     }
