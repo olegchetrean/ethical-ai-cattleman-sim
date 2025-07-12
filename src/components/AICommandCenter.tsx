@@ -168,7 +168,7 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
 
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-red-50 via-yellow-50 to-red-100 relative overflow-hidden ${className}`}>
+    <div className={`min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 relative overflow-hidden ${className}`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="grid grid-cols-8 gap-4 h-full w-full">
@@ -189,17 +189,17 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
       <div className="relative z-10 p-6">
         {/* Top Navigation */}
         <div className="mb-6">
-          <Card className="bg-white/90 backdrop-blur-sm border-game-orange border-2">
-            <CardContent className="p-4">
-              <div className="flex items-center justify-between">
-                <div className="flex flex-col">
-                  <h1 className="text-2xl md:text-3xl font-bold text-red-600">
-                    BUSINESS COMMAND CENTER
-                  </h1>
-                  <p className="text-sm text-gray-600 mt-1">
-                    Real-time business operations management and performance monitoring
-                  </p>
-                </div>
+           <Card className="bg-white/90 backdrop-blur-sm border-border shadow-lg">
+             <CardContent className="p-4">
+               <div className="flex items-center justify-between">
+                 <div className="flex flex-col">
+                   <h1 className="text-2xl md:text-3xl font-bold text-primary">
+                     Business Operations Dashboard
+                   </h1>
+                   <p className="text-sm text-muted-foreground mt-1">
+                     Real-time business operations management and performance monitoring
+                   </p>
+                 </div>
                 <div className="flex items-center gap-4">
                   <ResourceMonitor 
                     cash={cashFlow}
@@ -254,13 +254,13 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
 
       {/* Floating Status Indicators */}
       <div className="absolute bottom-20 right-6 space-y-2 z-40">
-        <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-green-500/90 text-white font-gaming text-sm">
+        <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-success-green text-white text-sm">
           <CheckCircle className="h-4 w-4" />
-          <span>SYSTEM ONLINE</span>
+          <span>System Online</span>
         </div>
-        <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-amber-500/90 text-white font-gaming text-sm float-gaming">
+        <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary text-white text-sm">
           <Zap className="h-4 w-4" />
-          <span>AUTO-OPTIMIZING</span>
+          <span>Auto-Optimizing</span>
         </div>
       </div>
     </div>

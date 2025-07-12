@@ -9,79 +9,79 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* McDonald's Professional Color Palette */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 12%;
+    /* Professional Business Color Palette */
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
 
-    /* McDonald's Brand Colors */
-    --game-red: 0 100% 45%;
-    --game-orange: 48 100% 50%;
-    --game-yellow: 48 100% 50%;
+    /* Professional Brand Colors */
+    --game-red: 214 95% 47%;
+    --game-orange: 214 95% 47%;
+    --game-yellow: 214 95% 55%;
     --game-green: 120 38% 45%;
     --game-forest: 120 48% 25%;
     --game-brown: 28 45% 35%;
     
     /* Interface Colors */
-    --card: 38 92% 95%;
-    --card-foreground: 0 0% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 12%;
+    --popover-foreground: 210 11% 15%;
 
-    --primary: 0 87% 52%;
+    --primary: 214 95% 47%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 24 95% 53%;
-    --secondary-foreground: 0 0% 12%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 210 11% 15%;
 
-    --muted: 45 45% 88%;
-    --muted-foreground: 0 0% 35%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 45 96% 58%;
-    --accent-foreground: 0 0% 12%;
+    --accent: 214 95% 47%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 87% 52%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 45 45% 85%;
+    --border: 220 13% 91%;
     --input: 0 0% 100%;
-    --ring: 0 87% 52%;
+    --ring: 214 95% 47%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Gaming-specific colors */
-    --cash-green: 120 100% 25%;
-    --warning-amber: 45 100% 51%;
+    /* Professional colors */
+    --cash-green: 142 71% 45%;
+    --warning-amber: 38 92% 50%;
     --error-red: 0 84% 60%;
-    --success-green: 120 100% 27%;
+    --success-green: 142 71% 45%;
 
     /* Gradients */
-    --gradient-gaming: linear-gradient(135deg, hsl(var(--game-red)), hsl(var(--game-orange)));
-    --gradient-cash: linear-gradient(135deg, hsl(var(--cash-green)), hsl(120 100% 35%));
-    --gradient-interface: linear-gradient(180deg, hsl(var(--game-orange)), hsl(var(--game-red)));
+    --gradient-gaming: linear-gradient(135deg, hsl(var(--primary)), hsl(214 95% 55%));
+    --gradient-cash: linear-gradient(135deg, hsl(var(--cash-green)), hsl(142 71% 50%));
+    --gradient-interface: linear-gradient(180deg, hsl(var(--secondary)), hsl(var(--card)));
 
     /* Shadows */
-    --shadow-gaming: 0 4px 20px hsl(var(--game-red) / 0.3);
-    --shadow-popup: 0 8px 32px hsl(0 0% 0% / 0.4);
-    --shadow-button: 0 2px 8px hsl(var(--game-orange) / 0.4);
+    --shadow-gaming: 0 4px 20px hsl(var(--primary) / 0.15);
+    --shadow-popup: 0 8px 32px hsl(0 0% 0% / 0.1);
+    --shadow-button: 0 2px 8px hsl(var(--primary) / 0.15);
 
     /* Animations */
     --transition-gaming: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --bounce-gaming: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     /* Typography */
-    --font-gaming: 'Arial', 'Helvetica', sans-serif;
-    --font-interface: 'Arial', 'Helvetica', sans-serif;
+    --font-gaming: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+    --font-interface: 'Inter', 'Segoe UI', 'Arial', sans-serif;
 
     /* Sidebar colors (keeping compatibility) */
-    --sidebar-background: 0 87% 52%;
+    --sidebar-background: 214 95% 47%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 0 87% 52%;
-    --sidebar-accent: 0 84% 60%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 84% 60%;
-    --sidebar-ring: 45 96% 58%;
+    --sidebar-primary-foreground: 214 95% 47%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 210 11% 15%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 214 95% 47%;
   }
 
   .dark {
