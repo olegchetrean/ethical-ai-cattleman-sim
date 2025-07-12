@@ -5,6 +5,7 @@ import { CustomerAcquisitionSector } from './CustomerAcquisitionSector';
 import { CustomerServiceSector } from './CustomerServiceSector';
 import { SalesOperationsSector } from './SalesOperationsSector';
 import { MarketingCampaignsSector } from './MarketingCampaignsSector';
+import { DataRecyclingSector } from './DataRecyclingSector';
 
 interface SectorViewProps {
   sector: SectorType;
@@ -22,8 +23,10 @@ export const SectorView: React.FC<SectorViewProps> = ({ sector, isPlaying }) => 
         return <SalesOperationsSector isPlaying={isPlaying} />;
       case 'marketing-campaigns':
         return <MarketingCampaignsSector isPlaying={isPlaying} />;
+      case 'data-recycling':
+        return <DataRecyclingSector isPlaying={isPlaying} />;
       default:
-        return <div>Sector not found</div>;
+        return <CustomerAcquisitionSector isPlaying={isPlaying} />;
     }
   };
 

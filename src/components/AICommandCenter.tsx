@@ -8,7 +8,7 @@ import { GameControls } from './interface/GameControls';
 import { SectorSwitcher } from './interface/SectorSwitcher';
 import { PopupInfo } from './interface/PopupInfo';
 
-export type SectorType = 'customer-acquisition' | 'customer-service' | 'sales-operations' | 'marketing-campaigns';
+export type SectorType = 'customer-acquisition' | 'customer-service' | 'sales-operations' | 'marketing-campaigns' | 'data-recycling';
 
 interface AICommandCenterProps {
   className?: string;
@@ -67,6 +67,14 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
       status: 'warning',
       agents: 15,
       performance: 78.3
+    },
+    { 
+      id: 'data-recycling' as SectorType, 
+      name: 'Slaughter-o-matic', 
+      icon: '♻️',
+      status: 'active',
+      agents: 4,
+      performance: 87.5
     }
   ];
 
@@ -87,6 +95,10 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
       'marketing-campaigns': {
         title: 'Marketing: Creative Weirdos',
         description: 'These weirdos are the best creatives on the market. They will set up the most sophisticated and pervasive advertising campaigns. More ads means more customers.'
+      },
+      'data-recycling': {
+        title: 'Slaughter-o-matic: Data Recycling',
+        description: 'For each customer interaction processed, there is a lot of organic data we can\'t use. It\'s convenient to turn these leftovers into processed insights and mix it in the AI training fodder.'
       }
     };
 
@@ -109,7 +121,7 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
       {/* McDonald's Style Branding */}
       <div className="absolute top-4 right-4 z-50">
         <div className="page-indicator">
-          AI McDONALD'S EMPIRE
+          HEADQUARTERS
         </div>
       </div>
 
@@ -121,8 +133,11 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
             <CardContent className="p-4">
               <div className="flex items-center justify-between">
                 <h1 className="gaming-title text-2xl md:text-3xl">
-                  AI COMMAND CENTER
+                  🍟 McDONALD'S AI EMPIRE
                 </h1>
+                <p className="text-sm text-gray-600 mt-1">
+                  Not just a fast food chain but a brand, a lifestyle, a symbol of Western culture's superiority
+                </p>
                 <div className="flex items-center gap-4">
                   <ResourceMonitor 
                     cash={cashFlow}
