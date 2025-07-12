@@ -9,14 +9,14 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Gaming Color Palette - Warm Industrial Theme */
-    --background: 38 92% 95%;
+    /* McDonald's Professional Color Palette */
+    --background: 0 0% 98%;
     --foreground: 0 0% 12%;
 
-    /* Gaming UI Colors */
-    --game-red: 0 87% 52%;
-    --game-orange: 24 95% 53%;
-    --game-yellow: 45 96% 58%;
+    /* McDonald's Brand Colors */
+    --game-red: 0 100% 45%;
+    --game-orange: 48 100% 50%;
+    --game-yellow: 48 100% 50%;
     --game-green: 120 38% 45%;
     --game-forest: 120 48% 25%;
     --game-brown: 28 45% 35%;
@@ -70,8 +70,8 @@ All colors MUST be HSL.
     --bounce-gaming: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     /* Typography */
-    --font-gaming: 'Orbitron', monospace;
-    --font-interface: 'Exo 2', sans-serif;
+    --font-gaming: 'Arial', 'Helvetica', sans-serif;
+    --font-interface: 'Arial', 'Helvetica', sans-serif;
 
     /* Sidebar colors (keeping compatibility) */
     --sidebar-background: 0 87% 52%;

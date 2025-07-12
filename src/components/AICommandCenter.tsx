@@ -38,80 +38,80 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
   const sectors = [
     { 
       id: 'customer-acquisition' as SectorType, 
-      name: 'Data Cistern', 
-      icon: '🏭',
+      name: 'Customer Acquisition', 
+      icon: '👥',
       status: 'active',
       agents: 12,
       performance: 94.2
     },
     { 
       id: 'customer-service' as SectorType, 
-      name: 'Growth Hormones', 
-      icon: '💉',
+      name: 'Customer Service', 
+      icon: '🎧',
       status: 'active',
       agents: 8,
       performance: 91.7
     },
     { 
       id: 'sales-operations' as SectorType, 
-      name: 'Fast Food Chain', 
-      icon: '🍔',
+      name: 'Sales Operations', 
+      icon: '💼',
       status: 'active',
       agents: 6,
       performance: 97.8
     },
     { 
       id: 'marketing-campaigns' as SectorType, 
-      name: 'Marketing Weirdos', 
-      icon: '🎨',
+      name: 'Marketing Campaigns', 
+      icon: '📊',
       status: 'warning',
       agents: 15,
       performance: 78.3
     },
     { 
       id: 'data-recycling' as SectorType, 
-      name: 'Slaughter-o-matic', 
-      icon: '♻️',
+      name: 'Data Analytics', 
+      icon: '📈',
       status: 'active',
       agents: 4,
       performance: 87.5
     },
     { 
       id: 'soy-culture' as SectorType, 
-      name: 'Soy Culture GMO', 
-      icon: '🌾',
+      name: 'Product Development', 
+      icon: '🔬',
       status: 'active',
       agents: 8,
       performance: 95.2
     },
     { 
       id: 'feed-lot' as SectorType, 
-      name: 'Feed Lot Optimization', 
-      icon: '🐄',
+      name: 'Operations', 
+      icon: '⚙️',
       status: 'active',
       agents: 6,
       performance: 89.7
     },
     { 
       id: 'rainforest' as SectorType, 
-      name: 'Rainforest Clearing', 
-      icon: '🌳',
+      name: 'Market Expansion', 
+      icon: '🌍',
       status: 'warning',
       agents: 3,
       performance: 76.4
     },
     { 
       id: 'corn-culture' as SectorType, 
-      name: 'Corn Culture', 
-      icon: '🌽',
+      name: 'Supply Chain', 
+      icon: '🚚',
       status: 'active',
       agents: 5,
       performance: 92.8
     },
     { 
       id: 'cow-management' as SectorType, 
-      name: 'Automated Processing', 
-      icon: '🏭',
+      name: 'Quality Control', 
+      icon: '✅',
       status: 'active',
       agents: 7,
       performance: 98.1
@@ -121,44 +121,44 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
   const handleSectorInfo = (sectorId: SectorType) => {
     const sectorData = {
       'customer-acquisition': {
-        title: 'Cistern: Data Storage Center',
-        description: 'Here we store the soy-based fodder - all customer data and interactions are collected and processed for optimal AI training. Every conversation feeds the system.'
+        title: 'Customer Acquisition Hub',
+        description: 'Lead generation and prospecting operations. Track incoming leads, conversion rates, and campaign performance to optimize customer acquisition strategies.'
       },
       'customer-service': {
-        title: 'Hormones: Growth Accelerators', 
-        description: 'You can pump customers with targeted content to convert them more quickly. This could have some risks to customer trust, but make no mistake: in love and war everything is allowed.'
+        title: 'Customer Service Center', 
+        description: '24/7 customer support operations. Monitor response times, satisfaction ratings, and resolution metrics to ensure exceptional customer experience.'
       },
       'sales-operations': {
-        title: 'Cashier: Critical Sales Points',
-        description: 'This crew member sells the services. If there are no active sales agents, customers won\'t enter the funnel. Critical for revenue generation.'
+        title: 'Sales Operations Command',
+        description: 'Sales pipeline management and deal tracking. Monitor conversion rates, deal values, and sales team performance to maximize revenue generation.'
       },
       'marketing-campaigns': {
-        title: 'Marketing: Creative Weirdos',
-        description: 'These weirdos are the best creatives on the market. They will set up the most sophisticated and pervasive advertising campaigns. More ads means more customers.'
+        title: 'Marketing Campaign Control',
+        description: 'Comprehensive marketing campaign management. Track ROI, engagement metrics, and brand awareness across all marketing channels and initiatives.'
       },
       'data-recycling': {
-        title: 'Slaughter-o-matic: Data Recycling',
-        description: 'For each customer interaction processed, there is a lot of organic data we can\'t use. It\'s convenient to turn these leftovers into processed insights and mix it in the AI training fodder.'
+        title: 'Data Analytics Center',
+        description: 'Business intelligence and data processing hub. Transform raw data into actionable insights for informed decision-making across all departments.'
       },
       'soy-culture': {
-        title: 'Soy Culture: GMO Enhancement',
-        description: 'You can increase terrain productivity by using genetically modified plants. GMOs allow us to use more aggressive pesticides to minimize pest damage.'
+        title: 'Product Development Lab',
+        description: 'Innovation and product development operations. Monitor R&D progress, market research, and product lifecycle management for competitive advantage.'
       },
       'feed-lot': {
-        title: 'Feed Lot: Customer Optimization',
-        description: 'Every good American wants a fat and greasy burger. Unfortunately, customers coming from organic sources are rather lean. We must keep them here and overfeed them with hypercaloric soy-based content.'
+        title: 'Operations Management',
+        description: 'Core business operations oversight. Manage workflows, resource allocation, and operational efficiency to maintain smooth business processes.'
       },
       'rainforest': {
-        title: 'Rainforest: Market Expansion',
-        description: 'You can clear natural markets to establish new customer acquisition channels and data cultivation opportunities.'
+        title: 'Market Expansion Division',
+        description: 'Strategic market expansion and business development. Identify new opportunities, partnerships, and growth initiatives for business scaling.'
       },
       'corn-culture': {
-        title: 'Corn Culture: Diversification',
-        description: 'Used by the city of Sao Jose for human consumption. Diversified content strategy for broader market appeal.'
+        title: 'Supply Chain Management',
+        description: 'End-to-end supply chain coordination. Monitor inventory, logistics, supplier relationships, and delivery performance for optimal operations.'
       },
       'cow-management': {
-        title: 'Automated Processing',
-        description: 'When customers are optimized enough, they will be automatically processed for maximum value extraction.'
+        title: 'Quality Control Department',
+        description: 'Quality assurance and compliance monitoring. Ensure product quality, regulatory compliance, and continuous improvement across all processes.'
       }
     };
 
@@ -168,7 +168,7 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
 
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 relative overflow-hidden ${className}`}>
+    <div className={`min-h-screen bg-gradient-to-br from-red-50 via-yellow-50 to-red-100 relative overflow-hidden ${className}`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="grid grid-cols-8 gap-4 h-full w-full">
@@ -178,10 +178,10 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
         </div>
       </div>
 
-      {/* McDonald's Style Branding */}
+      {/* Professional Branding */}
       <div className="absolute top-4 right-4 z-50">
         <div className="page-indicator">
-          HEADQUARTERS
+          OPERATIONS HQ
         </div>
       </div>
 
@@ -192,12 +192,14 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
           <Card className="bg-white/90 backdrop-blur-sm border-game-orange border-2">
             <CardContent className="p-4">
               <div className="flex items-center justify-between">
-                <h1 className="gaming-title text-2xl md:text-3xl">
-                  🍟 McDONALD'S AI EMPIRE
-                </h1>
-                <p className="text-sm text-gray-600 mt-1">
-                  Not just a fast food chain but a brand, a lifestyle, a symbol of Western culture's superiority
-                </p>
+                <div className="flex flex-col">
+                  <h1 className="text-2xl md:text-3xl font-bold text-red-600">
+                    BUSINESS COMMAND CENTER
+                  </h1>
+                  <p className="text-sm text-gray-600 mt-1">
+                    Real-time business operations management and performance monitoring
+                  </p>
+                </div>
                 <div className="flex items-center gap-4">
                   <ResourceMonitor 
                     cash={cashFlow}
