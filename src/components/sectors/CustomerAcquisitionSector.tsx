@@ -45,10 +45,9 @@ export const CustomerAcquisitionSector: React.FC<CustomerAcquisitionSectorProps>
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center">
-        <h2 className="gaming-title text-2xl mb-2">🎪 CUSTOMER ACQUISITION SECTOR</h2>
+        <h2 className="gaming-title text-2xl mb-2">🏭 DATA CISTERN SECTOR</h2>
         <p className="gaming-text">
-          AI agents identify and engage potential customers across multiple platforms, 
-          converting digital interactions into qualified leads.
+          Here we store the soy-based fodder - all customer data and interactions are collected and processed for optimal AI training.
         </p>
       </div>
 

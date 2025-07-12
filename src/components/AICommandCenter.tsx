@@ -16,7 +16,6 @@ interface AICommandCenterProps {
 
 export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) => {
   const [currentSector, setCurrentSector] = useState<SectorType>('customer-acquisition');
-  const [currentPage, setCurrentPage] = useState(1);
   const [isPlaying, setIsPlaying] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [popupContent, setPopupContent] = useState<{title: string, description: string} | null>(null);
@@ -39,32 +38,32 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
   const sectors = [
     { 
       id: 'customer-acquisition' as SectorType, 
-      name: 'Customer Acquisition', 
-      icon: '🎪',
+      name: 'Data Cistern', 
+      icon: '🏭',
       status: 'active',
       agents: 12,
       performance: 94.2
     },
     { 
       id: 'customer-service' as SectorType, 
-      name: 'Customer Service', 
-      icon: '🎧',
+      name: 'Growth Hormones', 
+      icon: '💉',
       status: 'active',
       agents: 8,
       performance: 91.7
     },
     { 
       id: 'sales-operations' as SectorType, 
-      name: 'Sales Operations', 
-      icon: '📊',
+      name: 'Fast Food Chain', 
+      icon: '🍔',
       status: 'active',
       agents: 6,
       performance: 97.8
     },
     { 
       id: 'marketing-campaigns' as SectorType, 
-      name: 'Marketing Campaigns', 
-      icon: '📈',
+      name: 'Marketing Weirdos', 
+      icon: '🎨',
       status: 'warning',
       agents: 15,
       performance: 78.3
@@ -74,20 +73,20 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
   const handleSectorInfo = (sectorId: SectorType) => {
     const sectorData = {
       'customer-acquisition': {
-        title: 'Customer Acquisition Sector',
-        description: 'AI agents work across social media platforms to identify and engage potential customers. Like skilled hunters, they track digital footprints and convert prospects into leads through intelligent conversations.'
+        title: 'Cistern: Data Storage Center',
+        description: 'Here we store the soy-based fodder - all customer data and interactions are collected and processed for optimal AI training. Every conversation feeds the system.'
       },
       'customer-service': {
-        title: 'Customer Service Operations', 
-        description: 'Dedicated AI agents handle customer support across all channels. They maintain high satisfaction rates through instant responses and escalate complex issues to human specialists when needed.'
+        title: 'Hormones: Growth Accelerators', 
+        description: 'You can pump customers with targeted content to convert them more quickly. This could have some risks to customer trust, but make no mistake: in love and war everything is allowed.'
       },
       'sales-operations': {
-        title: 'Sales Operations Division',
-        description: 'Sales AI agents manage the entire pipeline from lead qualification to deal closure. They optimize pricing, timing, and messaging for maximum conversion rates.'
+        title: 'Cashier: Critical Sales Points',
+        description: 'This crew member sells the services. If there are no active sales agents, customers won\'t enter the funnel. Critical for revenue generation.'
       },
       'marketing-campaigns': {
-        title: 'Marketing Campaign Engine',
-        description: 'Creative AI "weirdos" generate and execute sophisticated marketing campaigns across platforms. High volume, targeted messaging drives customer engagement and brand awareness.'
+        title: 'Marketing: Creative Weirdos',
+        description: 'These weirdos are the best creatives on the market. They will set up the most sophisticated and pervasive advertising campaigns. More ads means more customers.'
       }
     };
 
@@ -95,13 +94,6 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
     setShowPopup(true);
   };
 
-  const nextPage = () => {
-    setCurrentPage(prev => Math.min(prev + 1, 30));
-  };
-
-  const prevPage = () => {
-    setCurrentPage(prev => Math.max(prev - 1, 1));
-  };
 
   return (
     <div className={`min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 relative overflow-hidden ${className}`}>
@@ -114,10 +106,10 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
         </div>
       </div>
 
-      {/* Page Indicator */}
+      {/* McDonald's Style Branding */}
       <div className="absolute top-4 right-4 z-50">
         <div className="page-indicator">
-          PAGE {currentPage} / 30
+          AI McDONALD'S EMPIRE
         </div>
       </div>
 
@@ -165,35 +157,7 @@ export const AICommandCenter: React.FC<AICommandCenterProps> = ({ className }) =
         </div>
 
         {/* Bottom Controls */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Button 
-              className="gaming-button px-6 py-3 text-lg"
-              onClick={prevPage}
-              disabled={currentPage === 1}
-            >
-              <ArrowLeft className="mr-2 h-5 w-5" />
-              <span className="hidden sm:inline">PREV</span>
-            </Button>
-            
-            <Button 
-              className="gaming-button px-8 py-3 text-lg"
-              onClick={() => window.location.href = '/'}
-            >
-              <LogOut className="mr-2 h-5 w-5" />
-              EXIT
-            </Button>
-            
-            <Button 
-              className="gaming-button px-6 py-3 text-lg"
-              onClick={nextPage}
-              disabled={currentPage === 30}
-            >
-              <span className="hidden sm:inline">NEXT</span>
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-
+        <div className="flex items-center justify-center">
           <GameControls 
             isPlaying={isPlaying}
             onPlayPause={() => setIsPlaying(!isPlaying)}
